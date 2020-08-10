@@ -10,7 +10,9 @@ function App() {
     },
     placeholder: "Enter search",
   });
-  const results = Results();
+  const results = Results({
+    values: ["Issue A", "Issue B"],
+  });
   const main = createElement(
     "main",
     {
