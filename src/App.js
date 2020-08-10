@@ -10,14 +10,18 @@ function App() {
   });
 
   async function handleChange(query) {
-    const issues = await getIssues(query);
+    try {
+      const issues = await getIssues(query);
 
-    const newResults = Results({
-      issues: issues.items,
-    });
+      const newResults = Results({
+        issues: issues.items,
+      });
 
-    results.parentElement.replaceChild(newResults, results);
-    results = newResults;
+      results.parentElement.replaceChild(newResults, results);
+      results = newResults;
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const searchBox = SearchBox({

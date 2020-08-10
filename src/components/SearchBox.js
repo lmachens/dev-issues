@@ -18,6 +18,20 @@ function SearchBox(props) {
     props.onChange(input.value);
   });
 
+  let timeoutId = null;
+  input.addEventListener("input", () => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      props.onChange(input.value);
+    }, 500);
+  });
+
+  input.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+      props.onChange(input.value);
+    }
+  });
+
   return container;
 }
 
