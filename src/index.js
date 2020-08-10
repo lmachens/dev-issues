@@ -1,3 +1,4 @@
-import "./app.css";
+import App from "./App";
 
-console.log("INDEX");
+const app = App();
+document.body.append(app);

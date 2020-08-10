@@ -12,3 +12,9 @@ body {
   background: black;
   color: white;
 }
+
+.app {
+  display: grid;
+  place-items: center;
+  margin: 40px 20px;
+}
