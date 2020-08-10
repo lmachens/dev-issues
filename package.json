@@ -1,0 +1,24 @@
+{
+  "name": "dev-issues",
+  "version": "1.0.0",
+  "description": "Issues search example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmachens/dev-issues.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmachens/dev-issues/issues"
+  },
+  "homepage": "https://github.com/lmachens/dev-issues#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
