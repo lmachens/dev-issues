@@ -9,16 +9,22 @@ function App() {
     issues: [],
   });
 
+  function updateResults(issues) {
+    const newResults = Results({
+      issues: issues,
+    });
+    results.parentElement.replaceChild(newResults, results);
+    results = newResults;
+  }
+
   async function handleChange(query) {
     try {
+      if (!query.length) {
+        updateResults([]);
+        return;
+      }
       const issues = await getIssues(query);
-
-      const newResults = Results({
-        issues: issues.items,
-      });
-
-      results.parentElement.replaceChild(newResults, results);
-      results = newResults;
+      updateResults(issues.items);
     } catch (error) {
       console.error(error);
     }
