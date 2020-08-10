@@ -10,9 +10,7 @@ function App() {
   });
 
   async function handleChange(query) {
-    console.log(query);
     const issues = await getIssues(query);
-    console.log(issues);
 
     const newResults = Results({
       issues: issues.items,
