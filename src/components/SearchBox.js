@@ -1,8 +1,10 @@
 import "./searchBox.css";
 import { createElement } from "../utils/elements";
 
-function SearchBox() {
-  const input = createElement("input", { placeholder: "Enter search" });
+function SearchBox(props) {
+  const input = createElement("input", {
+    placeholder: props.placeholder,
+  });
   const button = createElement("button", { innerText: "🔎" });
   const container = createElement(
     "div",
@@ -13,7 +15,7 @@ function SearchBox() {
   );
 
   button.addEventListener("click", () => {
-    alert(input.value);
+    props.onChange(input.value);
   });
 
   return container;
