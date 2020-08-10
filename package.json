@@ -4,6 +4,7 @@
   "description": "Issues search example",
   "main": "index.js",
   "scripts": {
+    "dev:build": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/lmachens/dev-issues#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
