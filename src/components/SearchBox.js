@@ -11,6 +11,11 @@ function SearchBox() {
     },
     [input, button]
   );
+
+  button.addEventListener("click", () => {
+    alert(input.value);
+  });
+
   return container;
 }
 
